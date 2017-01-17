@@ -1,0 +1,26 @@
+#N canvas 656 100 829 531 10;
+#X obj 303 179 comport 3 9600;
+#X msg 384 136 open 3;
+#X msg 302 137 devices;
+#X msg 385 156 close;
+#X msg 177 77 print 0;
+#X obj 360 41 loadbang;
+#X msg 177 102 print 1;
+#X msg 370 377 print 2;
+#X text 28 217 0 = close 1 = open 2 = trig 10ms;
+#X text 300 119 device list;
+#X text 441 135 open port;
+#X text 441 156 close port;
+#X obj 614 317 metro 100;
+#X obj 644 246 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 12 0 7 0;
+#X connect 13 0 12 0;
